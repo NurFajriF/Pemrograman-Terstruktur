@@ -1,0 +1,36 @@
+kode = str(input("Masukkan kode karyawan	: "))
+nama = str(input("Masukkan nama karyawan	: "))
+golongan = str(input("Masukkan golongan	: "))
+
+print("====================================")
+print("STRUK RINCIAN GAJI KARYAWAN")
+print("-----------------------------------------------------------")
+print("Nama Karyawan		: ", nama , "(Kode: ", kode, ")")
+print("Golongan			: ", golongan)
+print("-----------------------------------------------------------")
+if(golongan == "A"):
+    gaji_pokok = float(10000000)
+    potongan = float(2.5)
+    besar_potongan = float(gaji_pokok * (potongan / 100)) 
+    gaji_bersih = float(gaji_pokok - besar_potongan)
+elif(golongan == "B"):
+    gaji_pokok = float(8500000)
+    potongan = float(2.0)
+    besar_potongan = float(gaji_pokok * (potongan / 100)) 
+    gaji_bersih = float(gaji_pokok - besar_potongan)
+elif(golongan == "C"):
+    gaji_pokok = float(7000000)
+    potongan = float(1.5)
+    besar_potongan = float(gaji_pokok * (potongan / 100)) 
+    gaji_bersih = float(gaji_pokok - besar_potongan)
+elif(golongan == "D"):
+    gaji_pokok = float(5500000)
+    potongan = float(1.0)
+    besar_potongan = float(gaji_pokok * (potongan / 100))
+    gaji_bersih = float(gaji_pokok - besar_potongan)
+else:
+    print("Maaf input yang anda masukkan salah")
+print("Gaji Pokok			: Rp ", gaji_pokok)
+print("Potongan (", potongan ,"%)		: Rp ", besar_potongan)
+print("----------------------------------------------------------- -")
+print("Gaji Bersih			: Rp ", gaji_bersih)
